@@ -1,0 +1,81 @@
+@use "./../../variables.scss";
+
+.container {
+  display: flex;
+  background-color: white;
+  padding: 15px;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: inherit;
+}
+.info {
+  width: 70%;
+}
+
+.description {
+  line-height: 22px;
+  font-size: 12px;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.75);
+  max-width: 750px;
+  overflow: hidden;
+}
+
+.heading {
+  display: flex;
+}
+
+.tags {
+  display: flex;
+  margin-top: 5px;
+}
+
+.user {
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    margin-right: 12px;
+  }
+
+  p {
+    text-align: right;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .date {
+    color: variables.$text-color2;
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+
+.title {
+  color: variables.$h5-color;
+  font-size: 20px;
+  line-height: 28px;
+}
+.edit,
+.delete {
+  display: inline-block;
+  height: 31px;
+  background-color: inherit;
+  font-size: 14px;
+  padding: 0 17px;
+  border-radius: 5px;
+}
+.delete {
+  margin-right: 12px;
+  color: rgb(245, 34, 45);
+  border: 1px solid rgb(245, 34, 45);
+}
+.edit {
+  color: rgb(82, 196, 26);
+  border: 1px solid rgb(82, 196, 26);
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}

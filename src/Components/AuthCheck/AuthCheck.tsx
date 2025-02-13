@@ -1,0 +1,11 @@
+import { useAuth } from "../../hook/useAuth";
+import { Navigate } from "react-router-dom";
+
+interface IAuthCheckProps {
+  children: React.ReactNode;
+}
+
+export const AuthCheck: React.FC<IAuthCheckProps> = ({ children }) => {
+  const { isAuth } = useAuth();
+  return isAuth ? <Navigate to="/" replace /> : <>{children}</>;
+};

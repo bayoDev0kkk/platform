@@ -1,0 +1,39 @@
+.AuthHeader {
+  display: inline-block;
+}
+
+.logout {
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.75);
+  line-height: 50px;
+  padding: 0px 18px;
+  background-color: inherit;
+  font-size: inherit;
+  display: inline-block;
+}
+
+.user {
+  margin: 0 27px;
+}
+
+.userName {
+  display: inline-block;
+  margin-right: 13px;
+}
+
+.article {
+  font-size: 14px;
+  height: 31px;
+  line-height: 30px;
+  border: 1px solid rgb(82, 196, 26);
+  border-radius: 5px;
+  color: rgb(82, 196, 26);
+  padding: 0 10px;
+  display: inline-block;
+  margin-left: 15px;
+}
+.posts {
+  border: none;
+}

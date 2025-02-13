@@ -1,0 +1,15 @@
+@use "./../../variables.scss";
+
+.TagItem {
+  border: 1px solid rgba(0, 0, 0, 0.85);
+  border-radius: 2px;
+  line-height: 18px;
+  height: 20px;
+  padding: 0 5px;
+  font-size: 12px;
+  margin-right: 8px;
+  &:not(:first-child) {
+    color: variables.$text-color2;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+}

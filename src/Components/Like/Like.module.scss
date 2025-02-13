@@ -1,0 +1,16 @@
+.Like {
+  margin-left: 10px;
+  .heart {
+    margin-right: 5px;
+    padding-top: 5px;
+    font-size: 16px;
+  }
+  .heartRed {
+    color: red;
+  }
+}
+:global {
+  .ant-checkbox {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+.Tag {
+  width: 300px;
+  margin-top: 5px;
+}
+.delete,
+.add {
+  display: inline-block;
+  height: 40px;
+  background-color: inherit;
+  font-size: 16px;
+  margin-left: 18px;
+  border-radius: 4px;
+}
+.delete {
+  width: 118px;
+  color: rgb(245, 34, 45);
+  border: 1px solid rgb(245, 34, 45);
+  &:disabled {
+    color: rgb(191, 191, 191);
+    border: 1px solid rgb(191, 191, 191);
+  }
+}
+.add {
+  width: 136px;
+  color: rgb(24, 144, 255);
+  border: 1px solid rgb(24, 144, 255);
+}

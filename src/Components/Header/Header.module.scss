@@ -1,0 +1,17 @@
+@use "../../variables.scss";
+.Header {
+  display: flex;
+  justify-content: space-between;
+  color: variables.$heading-color;
+  font-size: variables.$heading-font-size;
+  line-height: 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.Head {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: variables.$background-color 1px solid;
+}

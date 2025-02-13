@@ -1,0 +1,16 @@
+.FormButton {
+  width: 100%;
+  background-color: rgb(24, 144, 255);
+  height: 40px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  margin-top: 21px;
+
+  &:hover {
+    background-color: rgb(5, 133, 253);
+  }
+}
