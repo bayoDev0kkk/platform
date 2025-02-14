@@ -1,23 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ESNext"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
     "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
     "resolveJsonModule": true,
-
-    /* Linting */
+    "esModuleInterop": true,
+    "allowJs": true,
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "target": "ES6"
   },
   "include": ["vite.config.ts"]
 }
