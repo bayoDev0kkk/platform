@@ -10,8 +10,8 @@ import { Alert, Button, Form, Input, Spin } from "antd/es";
 import { FormError } from "../FormError/FormError";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import style from "./Article.module.scss";
 import React from "react";
+import styles from './Article.module.scss'
 export interface IPostForm {
   title: string;
   description: string;
@@ -119,13 +119,13 @@ export const Article: React.FC<IArticleProps> = ({
                     maxLength: { value: 20, message: "Max length is 20" },
                   }}
                   render={({ field }) => (
-                    <Input {...field} placeholder="Tag" className={style.Tag} />
+                    <Input {...field} placeholder="Tag" className={styles.Tag} />
                   )}
                 />
                 <button
                   type="button"
                   onClick={() => remove(index)}
-                  className={style.delete}
+                  className={styles.delete}
                   disabled={fields.length === 1}
                 >
                   Remove
@@ -134,7 +134,7 @@ export const Article: React.FC<IArticleProps> = ({
                   <button
                     type="button"
                     onClick={() => append({ tag: "" })}
-                    className={style.add}
+                    className={styles.add}
                   >
                     Add Tag
                   </button>
