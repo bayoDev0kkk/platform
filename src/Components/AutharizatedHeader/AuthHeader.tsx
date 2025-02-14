@@ -1,4 +1,4 @@
-import { Avatar } from "antd";
+import { Avatar } from "antd/es";
 import { useAuth } from "../../hook/useAuth";
 import { Link, useNavigate } from "react-router-dom";
 import style from "./AuthHeader.module.scss";
