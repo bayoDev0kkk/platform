@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
 import "./App.scss";
 import { Header } from "./Components/Header/Header";
-import { Layout } from "antd";
+import Layout from "antd/es/layout";
 import { useGetCurrentUserQuery } from "./redux/api/api";
-import { Spin } from "antd";
+import  Spin  from "antd/es/spin";
 import { useEffect } from "react";
 import { useAppDispatch } from "./redux/store";
 import { setAutarization } from "./redux/slice/AuthorizationSlice/Authorization";

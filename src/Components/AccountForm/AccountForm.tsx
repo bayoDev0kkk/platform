@@ -1,7 +1,7 @@
 import { FieldValues, UseFormHandleSubmit } from "react-hook-form";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { IApiHook } from "../../redux/api/api";
-import { Alert, Spin } from "antd";
+import { Alert, Spin } from "antd/es";
 import { setError } from "../../redux/slice/errorsDataSlice/errorsDataSlice";
 import { useAppDispatch } from "../../redux/store";
 import { useNavigate } from "react-router-dom";
@@ -39,7 +39,7 @@ export const AccountForm: React.FC<IAccountFormProps> = ({
   }
 
   return (
-    <Spin spinning={isLoading}>
+    <Spin spinning={isLoading} size="large">
       {isError && (
         <Alert message="Извините, такого аккаунта не существует" type="error" />
       )}

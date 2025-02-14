@@ -6,11 +6,11 @@ import {
 } from "react-hook-form";
 import { BigWindow } from "../BigWindow/BigWindow";
 import { FormHeader } from "../FormHeader/FormHeader";
-import { Alert, Button, Form, Input, Spin } from "antd";
+import { Alert, Button, Form, Input, Spin } from "antd/es";
 import { FormError } from "../FormError/FormError";
-import style from "./Article.module.scss";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import style from "./Article.module.scss";
 
 export interface IPostForm {
   title: string;
