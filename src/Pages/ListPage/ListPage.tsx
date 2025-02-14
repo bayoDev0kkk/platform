@@ -1,5 +1,6 @@
 import { useGetArticlesQuery } from "../../redux/api/api";
-import { Spin, Alert, Pagination, Empty } from "antd";
+import { Spin, Alert, Pagination, Empty } from "antd/es";
+import React from "react";
 import { PostItem } from "../../Components/PostItem/PostItem";
 import style from "./ListPage.module.scss";
 import { getOffset } from "./func";

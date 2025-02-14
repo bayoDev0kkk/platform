@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { getFetchParam } from "./func";
 import { FormHeader } from "../../Components/FormHeader/FormHeader";
 import { getUsernameError, getEmailError } from "../SignUpPage/func";
-
+import React from "react";
 const Profile: React.FC = () => {
   const {
     register,
@@ -17,7 +17,7 @@ const Profile: React.FC = () => {
   } = useForm();
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const urlRegex =
-    /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,}(:\d+)?(\/[^\s]*)?$/i;
+    /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,}(:\d+)?(\/\S*)?$/i;
   return (
     <SmallWindow>
       <AccountForm

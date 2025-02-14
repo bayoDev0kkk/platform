@@ -1,11 +1,12 @@
-import { Alert, Avatar, Popconfirm, Spin } from "antd";
+import { Alert, Avatar, Popconfirm, Spin } from "antd/es";
 import { IArticle } from "../../redux/api/apiTypes";
 import style from "./PostItem.module.scss";
-import { formatedDate } from "../../Components/PostItem/func";
+import { formattedDate } from "./func";
 import { TagItem } from "../TagItem/TagItem";
 import { Like } from "../Like/Like";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../hook/useAuth";
+import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDeletePostMutation } from "../../redux/api/api";
 import { useEffect } from "react";
@@ -58,7 +59,7 @@ export const PostItem: React.FC<IPostItemProps> = ({ article }) => {
         <div className={style.user}>
           <div>
             <p>{author.username}</p>
-            <p className={style.date}>{formatedDate(updatedAt)}</p>
+            <p className={style.date}>{formattedDate(updatedAt)}</p>
           </div>
           <Avatar size={46} src={author.image} />
         </div>

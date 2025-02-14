@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "./FooterFormLink.module.scss";
-
+import React from "react";
 interface IFooterFormLinkProps {
   linkText: string;
   to: string;

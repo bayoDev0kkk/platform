@@ -9,6 +9,7 @@ import { getFetchParam, getLoginError } from "./func";
 import { useAppSelector } from "../../redux/store";
 import { AuthCheck } from "../../Components/AuthCheck/AuthCheck";
 import { FormHeader } from "../../Components/FormHeader/FormHeader";
+import React from "react";
 
 const SignIn: React.FC = () => {
   const {

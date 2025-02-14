@@ -1,5 +1,5 @@
 import style from "./BigWindow.module.scss";
-
+import React from "react";
 interface IBigWindowProps {
   children: React.ReactNode;
 }

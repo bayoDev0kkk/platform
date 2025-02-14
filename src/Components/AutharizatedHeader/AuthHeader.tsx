@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import style from "./AuthHeader.module.scss";
 import { removeAutarization } from "../../redux/slice/AuthorizationSlice/Authorization";
 import { useAppDispatch } from "../../redux/store";
-
+import React from "react";
 export const AuthHeader: React.FC = () => {
   const { image, username } = useAuth();
   const naivigate = useNavigate();

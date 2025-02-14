@@ -7,6 +7,7 @@ import  Spin  from "antd/es/spin";
 import { useEffect } from "react";
 import { useAppDispatch } from "./redux/store";
 import { setAutarization } from "./redux/slice/AuthorizationSlice/Authorization";
+import React from "react";
 
 const App: React.FC = () => {
   const { data, isLoading } = useGetCurrentUserQuery();

@@ -15,6 +15,7 @@ import {
 import { useAppSelector } from "../../redux/store";
 import { AuthCheck } from "../../Components/AuthCheck/AuthCheck";
 import { FormHeader } from "../../Components/FormHeader/FormHeader";
+import React from "react";
 
 const SignUp: React.FC = () => {
   const {
@@ -26,7 +27,7 @@ const SignUp: React.FC = () => {
 
   const error = useAppSelector((state) => state.error);
 
-  const password = watch("password");
+  const password = watch;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   return (

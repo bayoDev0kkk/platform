@@ -6,6 +6,7 @@ import { setError } from "../../redux/slice/errorsDataSlice/errorsDataSlice";
 import { useAppDispatch } from "../../redux/store";
 import { useNavigate } from "react-router-dom";
 import { setAutarization } from "../../redux/slice/AuthorizationSlice/Authorization";
+import React from "react";
 
 interface IAccountFormProps {
   children: React.ReactNode;

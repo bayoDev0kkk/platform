@@ -2,6 +2,7 @@ import Checkbox, { CheckboxChangeEvent } from "antd/es/checkbox/Checkbox";
 import style from "./Like.module.scss";
 import { HeartOutlined, HeartFilled } from "@ant-design/icons";
 import { useState } from "react";
+import React from "react";
 import { useAuth } from "../../hook/useAuth";
 import { useSetLikeMutation, useDeleteLikeMutation } from "../../redux/api/api";
 

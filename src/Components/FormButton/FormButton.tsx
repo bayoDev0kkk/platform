@@ -1,5 +1,5 @@
 import style from "./FormButton.module.scss";
-
+import React from "react";
 interface IFormButtonProps {
   buttonText: string;
 }

@@ -4,7 +4,7 @@ import { useGetArticleQuery } from "../../redux/api/api";
 import { useParams } from "react-router-dom";
 import { Alert, Spin } from "antd";
 import Markdown from "markdown-to-jsx";
-
+import React from "react";
 export const PostPage: React.FC = () => {
   const { slug } = useParams();
   const { data, isError, isLoading } = useGetArticleQuery(slug!);

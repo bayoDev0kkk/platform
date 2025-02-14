@@ -1,4 +1,5 @@
 import style from "./FormHeader.module.scss";
+import React from "react";
 
 interface IFormHeaderProps {
   header: string;

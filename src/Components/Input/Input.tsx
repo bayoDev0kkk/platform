@@ -6,6 +6,7 @@ import {
 } from "react-hook-form";
 import style from "./Input.module.scss";
 import { FormError } from "../FormError/FormError";
+import React from "react";
 
 interface IInputProps {
   type: string;

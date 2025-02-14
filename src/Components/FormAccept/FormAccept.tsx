@@ -1,4 +1,5 @@
-import { Divider } from "antd";
+import { Divider } from "antd/es";
+import React from "react";
 import style from "./FormAccept.module.scss";
 import {
   FieldErrors,

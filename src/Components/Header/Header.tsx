@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { UnAutorizatedHeader } from "../UnAuthorizatedHeader/UnAuthorizatedHeader";
 import { useAuth } from "../../hook/useAuth";
 import { AuthHeader } from "../AutharizatedHeader/AuthHeader";
+import React from "react";
 
 export const Header: React.FC = () => {
   const { isAuth } = useAuth();

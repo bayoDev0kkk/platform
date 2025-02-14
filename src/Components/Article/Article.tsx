@@ -11,7 +11,7 @@ import { FormError } from "../FormError/FormError";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import style from "./Article.module.scss";
-
+import React from "react";
 export interface IPostForm {
   title: string;
   description: string;

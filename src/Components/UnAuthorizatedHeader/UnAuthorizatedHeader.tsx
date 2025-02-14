@@ -1,5 +1,6 @@
 import { NavLink, NavLinkRenderProps } from "react-router-dom";
 import style from "./UnAuthorizatedHeader.module.scss";
+import React from "react";
 const setActive = ({ isActive }: NavLinkRenderProps) =>
   isActive ? style.active + " " + style.link : style.link;
 
