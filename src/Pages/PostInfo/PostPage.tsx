@@ -2,7 +2,7 @@ import style from "./PostPage.module.scss";
 import { PostItem } from "../../Components/PostItem/PostItem";
 import { useGetArticleQuery } from "../../redux/api/api";
 import { useParams } from "react-router-dom";
-import { Alert, Spin } from "antd";
+import { Alert, Spin } from "antd/es";
 import Markdown from "markdown-to-jsx";
 import React from "react";
 export const PostPage: React.FC = () => {
