@@ -2,13 +2,13 @@ import { configureStore } from "@reduxjs/toolkit";
 import { api } from "./api/api";
 import { useDispatch, useSelector } from "react-redux";
 import errorSlice from "./slice/errorsDataSlice/errorsDataSlice";
-import autorizationSlice from "./slice/AuthorizationSlice/Authorization";
+import authorisationSlice from "./slice/AuthorizationSlice/Authorization";
 
 const store = configureStore({
   reducer: {
     api: api.reducer,
     error: errorSlice,
-    autorization: autorizationSlice,
+    autorization: authorisationSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(api.middleware),

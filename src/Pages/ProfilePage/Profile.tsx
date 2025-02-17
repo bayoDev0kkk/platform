@@ -1,12 +1,12 @@
-import { SmallWindow } from "../../Components/SmallWindow/SmallWindow";
-import { AuthCheckWithAuth } from "../../Components/AuthChekWithAuth/AuthChekWithAuth";
-import { AccountForm } from "../../Components/AccountForm/AccountForm";
-import { FormButton } from "../../Components/FormButton/FormButton";
-import { Input } from "../../Components/Input/Input";
-import { useUpdateCurrentUserMutation } from "../../redux/api/api";
+import { SmallWindow } from "src/Components/SmallWindow/SmallWindow";
+import { AuthCheckWithAuth } from "src/Components/AuthChekWithAuth/AuthChekWithAuth";
+import { AccountForm } from "src/Components/AccountForm/AccountForm";
+import { FormButton } from "src/Components/FormButton/FormButton";
+import { Input } from "src/Components/Input/Input";
+import { useUpdateCurrentUserMutation } from "src/redux/api/api";
 import { useForm } from "react-hook-form";
 import { getFetchParam } from "./func";
-import { FormHeader } from "../../Components/FormHeader/FormHeader";
+import { FormHeader } from "src/Components/FormHeader/FormHeader";
 import { getUsernameError, getEmailError } from "../SignUpPage/func";
 import React from "react";
 const Profile: React.FC = () => {

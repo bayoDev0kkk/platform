@@ -1,11 +1,11 @@
-import { useGetArticlesQuery } from "../../redux/api/api";
+import { useGetArticlesQuery } from "src/redux/api/api";
 import { Spin, Alert, Pagination, Empty } from "antd/es";
 import React from "react";
-import { PostItem } from "../../Components/PostItem/PostItem";
+import { PostItem } from "src/Components/PostItem/PostItem";
 import style from "./ListPage.module.scss";
 import { getOffset } from "./func";
 import { useState } from "react";
-import { IApiListsHook } from "../../redux/api/api";
+import { IApiListsHook } from "src/redux/api/api";
 
 interface IListPageProps {
   fetch?: IApiListsHook;
@@ -21,7 +21,7 @@ export const ListPage: React.FC<IListPageProps> = ({
   if (isError) {
     return (
       <Alert
-        message="ПРОИЗОШЛА ОГРОМНАЯ ОШИБКА, ПЕРЕУСТАНОВИТЕ ВИНДУ"
+        message="ПРОИЗОШЛА ОШИБКА"
         type="error"
         className={style.Alert}
       />

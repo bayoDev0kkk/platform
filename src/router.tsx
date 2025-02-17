@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import {createBrowserRouter, RouteObject} from "react-router-dom";
 import { ListPage } from "./Pages/ListPage/ListPage";
 import App from "./App";
 import { PostPage } from "./Pages/PostInfo/PostPage";
@@ -9,7 +9,7 @@ import { MyPostsPage } from "./Pages/MyPostsPage/MyPostsPage";
 import { NewArticle } from "./Pages/NewArticle/NewArticle";
 import { EditPost } from "./Pages/EditPost/EditPost";
 
-const routes = [
+const routes:RouteObject[] = [
   { path: "/articles", element: <ListPage /> },
   { path: "/articles/:slug", element: <PostPage /> },
   { path: "/sign-up", element: <SignUpPage /> },
@@ -21,10 +21,18 @@ const routes = [
 ];
 
 export const router = createBrowserRouter([
-  {
+    {
     path: "/",
     element: <App />,
     children: routes,
   },
   { path: "*", element: <App /> },
-]);
+],
+    {
+      future: {
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      },
+    }
+);
+

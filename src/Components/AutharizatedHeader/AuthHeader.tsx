@@ -1,9 +1,9 @@
 import { Avatar } from "antd/es";
-import { useAuth } from "../../hook/useAuth";
+import { useAuth } from "src/hook/useAuth";
 import { Link, useNavigate } from "react-router-dom";
 import style from "./AuthHeader.module.scss";
-import { removeAutarization } from "../../redux/slice/AuthorizationSlice/Authorization";
-import { useAppDispatch } from "../../redux/store";
+import { removeAutarization } from "src/redux/slice/AuthorizationSlice/Authorization";
+import { useAppDispatch } from "src/redux/store";
 import React from "react";
 export const AuthHeader: React.FC = () => {
   const { image, username } = useAuth();

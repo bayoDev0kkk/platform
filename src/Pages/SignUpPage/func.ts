@@ -1,5 +1,5 @@
 import { FieldValues } from "react-hook-form";
-import { IUserCreateError } from "../../redux/api/apiTypes";
+import { IUserCreateError } from "src/redux/api/apiTypes";
 
 export const getFetchParam = (data: FieldValues): FieldValues => {
   const { username, email, password } = data;

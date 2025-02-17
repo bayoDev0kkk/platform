@@ -1,14 +1,14 @@
 import { useForm } from "react-hook-form";
-import { AccountForm } from "../../Components/AccountForm/AccountForm";
-import { FooterFormLink } from "../../Components/FooterFormLink/FooterFormLink";
-import { FormButton } from "../../Components/FormButton/FormButton";
-import { Input } from "../../Components/Input/Input";
-import { SmallWindow } from "../../Components/SmallWindow/SmallWindow";
-import { useLoginUserMutation } from "../../redux/api/api";
+import { AccountForm } from "src/Components/AccountForm/AccountForm";
+import { FooterFormLink } from "src/Components/FooterFormLink/FooterFormLink";
+import { FormButton } from "src/Components/FormButton/FormButton";
+import { Input } from "src/Components/Input/Input";
+import { SmallWindow } from "src/Components/SmallWindow/SmallWindow";
+import { useLoginUserMutation } from "src/redux/api/api";
 import { getFetchParam, getLoginError } from "./func";
-import { useAppSelector } from "../../redux/store";
-import { AuthCheck } from "../../Components/AuthCheck/AuthCheck";
-import { FormHeader } from "../../Components/FormHeader/FormHeader";
+import { useAppSelector } from "src/redux/store";
+import { AuthCheck } from "src/Components/AuthCheck/AuthCheck";
+import { FormHeader } from "src/Components/FormHeader/FormHeader";
 import React from "react";
 
 const SignIn: React.FC = () => {

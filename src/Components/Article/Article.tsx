@@ -41,7 +41,7 @@ export const Article: React.FC<IArticleProps> = ({
     control,
   } = useForm<IPostForm>({ defaultValues: defaultVal });
 
-  const { fields, append, remove } = useFieldArray<IPostForm>({
+  const { fields, append, remove } = useFieldArray<IPostForm, "tagList">({
     name: "tagList",
     control,
   });
@@ -68,7 +68,7 @@ export const Article: React.FC<IArticleProps> = ({
               control={control}
               rules={{
                 required: "Is required",
-                maxLength: { value: 30, message: "Max length is 30" },
+                maxLength:{ value: 30, message: "Max length is 30" } as const,
               }}
               render={({ field }) => <Input {...field} placeholder="Title" />}
             />

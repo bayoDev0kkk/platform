@@ -1,14 +1,14 @@
 import { Alert, Avatar, Popconfirm, Spin } from "antd/es";
-import { IArticle } from "../../redux/api/apiTypes";
+import { IArticle } from "src/redux/api/apiTypes";
 import style from "./PostItem.module.scss";
 import { formattedDate } from "./func";
 import { TagItem } from "../TagItem/TagItem";
 import { Like } from "../Like/Like";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../hook/useAuth";
+import { useAuth } from "src/hook/useAuth";
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useDeletePostMutation } from "../../redux/api/api";
+import { useDeletePostMutation } from "src/redux/api/api";
 import { useEffect } from "react";
 
 interface IPostItemProps {

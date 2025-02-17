@@ -1,6 +1,6 @@
-import { useGetUserArticlesQuery } from "../../redux/api/api";
+import { useGetUserArticlesQuery } from "src/redux/api/api";
 import { ListPage } from "../ListPage/ListPage";
-import { AuthCheckWithAuth } from "../../Components/AuthChekWithAuth/AuthChekWithAuth";
+import { AuthCheckWithAuth } from "src/Components/AuthChekWithAuth/AuthChekWithAuth";
 import React from "react";
 export const MyPostsPage: React.FC = () => (
   <AuthCheckWithAuth>

@@ -1,10 +1,10 @@
-import { AuthCheckWithAuth } from "../../Components/AuthChekWithAuth/AuthChekWithAuth";
+import { AuthCheckWithAuth } from "src/Components/AuthChekWithAuth/AuthChekWithAuth";
 import { SubmitHandler } from "react-hook-form";
-import { IPost } from "../../redux/api/apiTypes";
-import { useUpdatePostMutation } from "../../redux/api/api";
-import { Article, IPostForm } from "../../Components/Article/Article";
+import { IPost } from "src/redux/api/apiTypes";
+import { useUpdatePostMutation } from "src/redux/api/api";
+import { Article, IPostForm } from "src/Components/Article/Article";
 import { useLocation } from "react-router-dom";
-import { IArticle } from "../../redux/api/apiTypes";
+import { IArticle } from "src/redux/api/apiTypes";
 
 export const EditPost = () => {
   const { state } = useLocation();

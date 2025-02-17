@@ -18,7 +18,7 @@ export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
   endpoints: (builder) => ({
     getArticles: builder.query<ArticlesDTO, number>({
-      query: (offset) => ({
+      query: (offset: num) => ({
         url: "articles?limit=5&offset=" + offset,
       }),
       keepUnusedDataFor: 0,

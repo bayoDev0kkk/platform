@@ -2,7 +2,7 @@ import { Header as HeaderANTD } from "antd/es/layout/layout";
 import style from "./Header.module.scss";
 import { NavLink } from "react-router-dom";
 import { UnAutorizatedHeader } from "../UnAuthorizatedHeader/UnAuthorizatedHeader";
-import { useAuth } from "../../hook/useAuth";
+import { useAuth } from "src/hook/useAuth";
 import { AuthHeader } from "../AutharizatedHeader/AuthHeader";
 import React from "react";
 

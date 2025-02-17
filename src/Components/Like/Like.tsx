@@ -3,8 +3,8 @@ import style from "./Like.module.scss";
 import { HeartOutlined, HeartFilled } from "@ant-design/icons";
 import { useState } from "react";
 import React from "react";
-import { useAuth } from "../../hook/useAuth";
-import { useSetLikeMutation, useDeleteLikeMutation } from "../../redux/api/api";
+import { useAuth } from "src/hook/useAuth";
+import { useSetLikeMutation, useDeleteLikeMutation } from "src/redux/api/api";
 
 interface ILikeProps {
   like: boolean;

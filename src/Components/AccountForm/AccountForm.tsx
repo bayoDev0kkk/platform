@@ -1,11 +1,11 @@
 import { FieldValues, UseFormHandleSubmit } from "react-hook-form";
 import { useEffect } from "react";
-import { IApiHook } from "../../redux/api/api";
+import { IApiHook } from "src/redux/api/api";
 import { Alert, Spin } from "antd/es";
-import { setError } from "../../redux/slice/errorsDataSlice/errorsDataSlice";
-import { useAppDispatch } from "../../redux/store";
+import { setError } from "src/redux/slice/errorsDataSlice/errorsDataSlice";
+import { useAppDispatch } from "src/redux/store";
 import { useNavigate } from "react-router-dom";
-import { setAutarization } from "../../redux/slice/AuthorizationSlice/Authorization";
+import { setAutarization } from "src/redux/slice/AuthorizationSlice/Authorization";
 import React from "react";
 
 interface IAccountFormProps {
@@ -42,7 +42,7 @@ export const AccountForm: React.FC<IAccountFormProps> = ({
   return (
     <Spin spinning={isLoading} size="large">
       {isError && (
-        <Alert message="Извините, такого аккаунта не существует" type="error" />
+        <Alert message="Извините, такой аккаунт уже существует" type="error" />
       )}
       {isSuccess && (
         <Alert

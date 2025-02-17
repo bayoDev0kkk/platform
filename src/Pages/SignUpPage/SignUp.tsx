@@ -1,20 +1,20 @@
-import { SmallWindow } from "../../Components/SmallWindow/SmallWindow";
-import { AccountForm } from "../../Components/AccountForm/AccountForm";
-import { FooterFormLink } from "../../Components/FooterFormLink/FooterFormLink";
-import { FormButton } from "../../Components/FormButton/FormButton";
-import { Input } from "../../Components/Input/Input";
-import { FormAccept } from "../../Components/FormAccept/FormAccept";
+import { SmallWindow } from "src/Components/SmallWindow/SmallWindow";
+import { AccountForm } from "src/Components/AccountForm/AccountForm";
+import { FooterFormLink } from "src/Components/FooterFormLink/FooterFormLink";
+import { FormButton } from "src/Components/FormButton/FormButton";
+import { Input } from "src/Components/Input/Input";
+import { FormAccept } from "src/Components/FormAccept/FormAccept";
 import { useForm } from "react-hook-form";
-import { useCreateUserMutation } from "../../redux/api/api";
+import { useCreateUserMutation } from "src/redux/api/api";
 import {
   getFetchParam,
   getUsernameError,
   getEmailError,
   getPasswordError,
 } from "./func";
-import { useAppSelector } from "../../redux/store";
-import { AuthCheck } from "../../Components/AuthCheck/AuthCheck";
-import { FormHeader } from "../../Components/FormHeader/FormHeader";
+import { useAppSelector } from "src/redux/store";
+import { AuthCheck } from "src/Components/AuthCheck/AuthCheck";
+import { FormHeader } from "src/Components/FormHeader/FormHeader";
 import React from "react";
 
 const SignUp: React.FC = () => {
@@ -27,7 +27,7 @@ const SignUp: React.FC = () => {
 
   const error = useAppSelector((state) => state.error);
 
-  const password = watch;
+  const password = watch("password");
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   return (
@@ -107,7 +107,7 @@ const SignUp: React.FC = () => {
           register={register}
           options={{
             required: "Repeat password is required",
-            validate: (value) => value === password || "Passwords mast match",
+            validate: (value) => value === password || "Passwords must match",
           }}
         />
         <FormAccept
