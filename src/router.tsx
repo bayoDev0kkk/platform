@@ -27,12 +27,6 @@ export const router = createBrowserRouter([
     children: routes,
   },
   { path: "*", element: <App /> },
-],
-    {
-      future: {
-        v7_startTransition: true,
-        v7_relativeSplatPath: true,
-      },
-    }
+]
 );
 
