@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
     <HeaderANTD className={style.Head}>
       <div className={style.Header}>
         <h6>
-          <NavLink to="/articles">Realworld Blog</NavLink>
+          <NavLink to="/articles">RealWorld Blog</NavLink>
         </h6>
         <div>{isAuth ? <AuthHeader /> : <UnAutorizatedHeader />}</div>
       </div>

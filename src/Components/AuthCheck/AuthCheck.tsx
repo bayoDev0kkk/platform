@@ -7,5 +7,5 @@ interface IAuthCheckProps {
 
 export const AuthCheck: React.FC<IAuthCheckProps> = ({ children }) => {
   const { isAuth } = useAuth();
-  return isAuth ? <Navigate to="/" replace /> : <>{children}</>;
+  return isAuth ? <Navigate to="articles" replace /> : <>{children}</>;
 };

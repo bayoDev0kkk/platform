@@ -31,7 +31,7 @@ export const Input: React.FC<IInputProps> = ({
   autocomplete,
   serverError,
 }) => {
-  console.log(error);
+  // console.log(error);
   return (
     <label className={style.Input}>
       <p>{header}</p>

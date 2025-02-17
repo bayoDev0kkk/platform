@@ -1,6 +1,6 @@
 import style from "./PostPage.module.scss";
-import { PostItem } from "../../Components/PostItem/PostItem";
-import { useGetArticleQuery } from "../../redux/api/api";
+import { PostItem } from "src/Components/PostItem/PostItem";
+import { useGetArticleQuery } from "src/redux/api/api";
 import { useParams } from "react-router-dom";
 import { Alert, Spin } from "antd/es";
 import Markdown from "markdown-to-jsx";
@@ -11,7 +11,7 @@ export const PostPage: React.FC = () => {
   if (isError) {
     return (
       <Alert
-        message="ПРОИЗОШЛА ОГРОМНАЯ ОШИБКА, ПЕРЕУСТАНОВИТЕ ВИНДУ"
+        message="something went wrong! This message from Post Page"
         type="error"
       />
     );

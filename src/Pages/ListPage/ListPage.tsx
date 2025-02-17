@@ -27,7 +27,7 @@ export const ListPage: React.FC<IListPageProps> = ({
       />
     );
   }
-  console.log(data);
+
   return (
     <Spin spinning={isFetching} className={style.Alert} size="large">
       <ul className={style.ListPage}>

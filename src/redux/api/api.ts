@@ -10,6 +10,10 @@ import {
   IUpdatePost,
 } from "./apiTypes";
 import { FieldValues } from "react-hook-form";
+import {
+  getLocalStorageToken,
+  getLocalStorageUsername,
+} from "src/LocalStorage/localStorage";
 
 const BASE_URL = "https://blog-platform.kata.academy/api";
 
@@ -20,12 +24,14 @@ export const api = createApi({
     getArticles: builder.query<ArticlesDTO, number>({
       query: (offset) => ({
         url: "articles?limit=5&offset=" + offset,
+        headers: { Authorization: `Token ${getLocalStorageToken()}` },
       }),
       keepUnusedDataFor: 0,
     }),
     getArticle: builder.query<ArticleDTO, string>({
       query: (slug) => ({
         url: "articles/" + slug,
+        headers: { Authorization: `Token ${getLocalStorageToken()}` },
       }),
       keepUnusedDataFor: 0,
     }),
@@ -60,6 +66,7 @@ export const api = createApi({
     getCurrentUser: builder.query<IUserLogin, void>({
       query: () => ({
         url: "user",
+        headers: { Authorization: `Token ${getLocalStorageToken()}` },
       }),
       transformResponse: (response: LoginUserDTO) => response.user,
     }),
@@ -67,20 +74,24 @@ export const api = createApi({
       query: (userInfo) => ({
         url: "user",
         method: "PUT",
+        headers: { Authorization: `Token ${getLocalStorageToken()}` },
         body: { user: { ...userInfo } },
       }),
       transformResponse: (response: LoginUserDTO) => response.user,
     }),
     getUserArticles: builder.query<ArticlesDTO, number>({
       query: (offset) =>
-        "articles?limit=5&offset=" +
-        offset +
-        "&author=" 
+          "articles?limit=5&offset=" +
+          offset +
+          "&author=" +
+          getLocalStorageUsername(),
+      keepUnusedDataFor: 0,
     }),
     addPost: builder.mutation<ArticleDTO, IPost>({
       query: (post) => ({
         url: "articles",
         method: "POST",
+        headers: { Authorization: `Token ${getLocalStorageToken()}` },
         body: { article: post },
       }),
     }),
@@ -88,6 +99,7 @@ export const api = createApi({
       query: (post) => ({
         url: "articles/" + post.slug,
         method: "PUT",
+        headers: { Authorization: `Token ${getLocalStorageToken()}` },
         body: { article: post.article },
       }),
     }),
@@ -95,18 +107,21 @@ export const api = createApi({
       query: (slug) => ({
         url: "articles/" + slug,
         method: "DELETE",
+        headers: { Authorization: `Token ${getLocalStorageToken()}` },
       }),
     }),
     setLike: builder.mutation<ArticleDTO, string>({
       query: (slug) => ({
         url: "articles/" + slug + "/favorite",
         method: "POST",
+        headers: { Authorization: `Token ${getLocalStorageToken()}` },
       }),
     }),
     deleteLike: builder.mutation<ArticleDTO, string>({
       query: (slug) => ({
         url: "articles/" + slug + "/favorite",
         method: "DELETE",
+        headers: { Authorization: `Token ${getLocalStorageToken()}` },
       }),
     }),
   }),
@@ -128,10 +143,10 @@ export const {
 } = api;
 
 export type IApiHook =
-  | typeof useCreateUserMutation
-  | typeof useLoginUserMutation
-  | typeof useUpdateCurrentUserMutation;
+    | typeof useCreateUserMutation
+    | typeof useLoginUserMutation
+    | typeof useUpdateCurrentUserMutation;
 
 export type IApiListsHook =
-  | typeof useGetArticlesQuery
-  | typeof useGetUserArticlesQuery;
+    | typeof useGetArticlesQuery
+    | typeof useGetUserArticlesQuery;

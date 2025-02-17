@@ -1,4 +1,4 @@
-import {createBrowserRouter, RouteObject} from "react-router-dom";
+import {createBrowserRouter, Navigate, RouteObject} from "react-router-dom";
 import { ListPage } from "./Pages/ListPage/ListPage";
 import App from "./App";
 import { PostPage } from "./Pages/PostInfo/PostPage";
@@ -10,6 +10,7 @@ import { NewArticle } from "./Pages/NewArticle/NewArticle";
 import { EditPost } from "./Pages/EditPost/EditPost";
 
 const routes:RouteObject[] = [
+  { path: "/", element: <Navigate to="/articles" replace /> },
   { path: "/articles", element: <ListPage /> },
   { path: "/articles/:slug", element: <PostPage /> },
   { path: "/sign-up", element: <SignUpPage /> },
@@ -26,7 +27,7 @@ export const router = createBrowserRouter([
     element: <App />,
     children: routes,
   },
-  { path: "*", element: <App /> },
+  { path: "*", element: <ListPage /> },
 ]
 );
 
